@@ -1,11 +1,9 @@
-const listEl = document.querySelectorAll('li.item');
-console.log(listEl);
+const listEl = document.querySelectorAll('li.item ul');
 console.log(`Number of categorise: ${listEl.length}`);
 
 
-
-listEl.forEach(element => {
-    console.log(`Category: ${element.firstElementChild.textContent}`);
-    console.log(`Elements: ${element.children.length}`);
+listEl.forEach(item => {
+    console.log(`Category: ${item.previousElementSibling.textContent}`);
+    console.log(`Elements: ${item.children.length}`);
 });
 
