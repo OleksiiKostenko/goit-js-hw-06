@@ -9,10 +9,8 @@ function onFormSubmit(event) {
 
     const formData = new FormData(event.currentTarget);
 
-    formData.forEach((email, password) => {
-        console.log(email);
-        console.log(password);
-    })
+    console.log(formData.get('email'))
+    console.log(formData.get('password'))
 
 
     if (event.currentTarget.elements.email.value === '' || event.currentTarget.elements.password.value === '') {

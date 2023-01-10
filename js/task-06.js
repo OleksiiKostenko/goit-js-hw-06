@@ -11,3 +11,7 @@ inputAreaEl.addEventListener("blur", (evt) => {
     }
 });
 
+inputAreaEl.addEventListener("focus", () => {
+    inputAreaEl.classList.remove(inputAreaEl.classList);
+})
+

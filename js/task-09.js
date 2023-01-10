@@ -13,6 +13,6 @@ const textNameBgdColor = document.querySelector('.color');
 
 colorChangeBtm.addEventListener('click', () => {
     textNameBgdColor.textContent = getRandomHexColor();
-    bodyColor.setAttribute('style', `background-color : ${getRandomHexColor()}`);
+    bodyColor.setAttribute('style', `background-color : ${textNameBgdColor.textContent}`);
 })
 
