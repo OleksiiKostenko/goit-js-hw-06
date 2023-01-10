@@ -6,19 +6,22 @@ formEl.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(event) {
     event.preventDefault();
+    
+    const inputValue = event.currentTarget.elements;
+    const inputValueEmail = inputValue.email.value;
+    const inputValuePassword = inputValue.password.value;
 
-    const formData = new FormData(event.currentTarget);
+    const formData = {
+        inputValueEmail,
+        inputValuePassword,
+    };
 
-    console.log(formData.get('email'))
-    console.log(formData.get('password'))
 
 
     if (event.currentTarget.elements.email.value === '' || event.currentTarget.elements.password.value === '') {
         alert("All fields are required");
     } else (event.currentTarget.reset());
 
-      
+      console.log(formData)
 }
-
-
 
